@@ -1,0 +1,219 @@
+@font-face {
+    font-family: PowerGrotesk;
+    src: url(/fonts/power_grotesk/PowerGrotesk-UltraBold.otf) format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: PowerGrotesk;
+    src: url(/fonts/power_grotesk/PowerGrotesk-Bold.otf) format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy/Gilroy-Semibold.otf) format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy/Gilroy-Medium.otf) format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy/Gilroy-Regular.otf) format('opentype');
+    font-weight: 500;
+}
+
+@import "tailwindcss";
+
+@theme {
+    --leading-13: 48.5px;
+    --leading-25: 25.3px;
+    --leading-50: 50.9px;
+    --leading-39: 39.7px;
+    --leading-19: 19.8px;
+    --leading-41: 41px;
+    --leading-20: 20px;
+    --leading-22: 22px;
+    --leading-21: 21.1px;
+
+    /* --tracking-brand-wide: -0.45% */
+
+    --text-50xl: 50px;
+    --text-40xl: 40px;
+    --text-43xl: 43.26px;
+    --text-lx: 22.59px;
+    --text-es: 9.58px;
+    --text-ex: 12.85px;
+    --text-15: 15.34px;
+    --text-13: 13px;
+    --text-34: 34px;
+    --text-32 : 32px;
+    --text-22 : 22px;
+    --text-25 : 25.24px;
+    --text-20 : 20.21px;
+    --text-11: 11px;
+    --text-17: 17px;
+    --text-70: 70px;
+    --text-10: 10px;
+    --text-8: 8px;
+    --text-9: 9px;
+    --text-18: 18.18px;
+    --text-6: 6.9px;
+    --text-8x: 8.78px;
+    --text-28: 28px;
+    --text-5xl: 5.53px;
+    --text-4xl: 4.74px;
+    
+    --spacing-79: 479px;
+    --spacing-33: 33px;
+    --spacing-160: 160px;
+    --spacing-150: 150px;
+    --spacing-120: 120px;
+    --spacing-202: 202px;
+    --spacing-502: 502px;
+    --spacing-310: 310px;
+    --spacing-110: 110px;
+    --spacing-115: 115px;
+    --spacing-11: 11px;
+    --spacing-192: 192px;
+    --spacing-22: 22px;
+    --spacing-223: 223px;
+    --spacing-27: 27.27px;
+    --spacing-12: 12.94px;
+    --spacing-39: 39px;
+    --spacing-36: 36px;
+    --spacing-346: 346px;
+    --spacing-19: 19px;
+    --spacing-42: 42px;
+    --spacing-242: 242px;
+    --spacing-92: 92px;
+    --spacing-95: 95px;
+    --spacing-90: 90px;
+    --spacing-962: 962px;
+    --spacing-148: 148px;
+    --spacing-105: 105px;
+    --spacing-104: 104px;
+    --spacing-43: 43.63px;
+    --spacing-74: 74px;
+    --spacing-70: 70px;
+    --spacing-708: 708px;
+    --spacing-40: 40px;
+    --spacing-50: 50px;
+    --spacing-66: 66px;
+    --spacing-8: 8px;
+    --spacing-108: 108px;
+    --spacing-18: 18px;
+    --spacing-6: 6px;
+    --spacing-256: 256.94px;
+    --spacing-658: 658.48px;
+    --spacing-370: 370.40px;
+    --spacing-423: 423px;
+    --spacing-984: 984px;
+    --spacing-84: 84px;
+    --spacing-860: 860px;
+    --spacing-485: 485px;
+    --spacing-426: 426px;
+    --spacing-462: 462px;
+    --spacing-620: 620.12px;
+    --spacing-403: 403.80px;
+    --spacing-450: 450.34px;
+    --spacing-519: 519px;
+    --spacing-107: 107.68px;
+    --spacing-407: 407px;
+    --spacing-171: 171px;
+    --spacing-144: 144px;
+    --spacing-134: 134px;
+    --spacing-906: 906px;
+    --spacing-1029: 1029px;
+    --spacing-154: 154px;
+    --spacing-754: 754.7px;
+    --spacing-233: 233px;
+    --spacing-271: 271px;
+    --spacing-267: 267px;
+    --spacing-722: 722px;
+    --spacing-732: 732px;
+    --spacing-371: 371px;
+    --spacing-383: 383px;
+    --spacing-530: 530px;
+    --spacing-256: 256px;
+    --spacing-257: 257px;
+    --spacing-250: 250px;
+    --spacing-410: 410px;
+    --spacing-682: 682px;
+    
+    --color-brand: #ef4935;
+    --color-brand-50: #036;
+    --color-brand-100: #b1bbc8;
+    --color-brand-150: #26292c;
+    --color-brand-200: #d4d4d4;
+    --color-brand-250: #252525;
+    --color-brand-300: #3b3a3a;
+    --color-brand-350: #64748b;
+    --color-brand-400: #2a1e1e;
+    --color-brand-450: #361d1d;
+    --color-brand-500: #252424;
+    --color-brand-550: #2a2b2b;
+    --color-brand-600: #eaecf0;
+    --color-brand-650: #323333;
+    --color-brand-700: #1c1b1b;
+    --color-brand-750: #1e1e1e;
+    --color-brand-800: #262626;
+    --color-brand-850: #2b1212;
+    --color-brand-900: #050505;
+    --color-brand-950: #434e61;
+    --color-brand-1000: #667085;
+    --color-brand-1050: #a3a2a5;
+    --color-brand-1100: #848484;
+    --color-brand-1150: #545454;
+    --color-brand-1200: #0a84ff;
+    --color-brand-1250: #a7a7a7;
+    --color-brand-1300: #b2b2b2;
+    --color-brand-1350: #131414;
+    --color-brand-1400: #0e0e0e;
+    --color-brand-1450: #26292c;
+    --color-brand-1500: #2a2d30;
+    --color-brand-1550: #42c458;
+
+    --container-77xl: 775px;
+    --container-62: 600px;
+    --container-65: 252px;
+    --container-58: 1058px;
+    --container-392: 392px;
+    --container-207: 207px;
+    --container-8xl: 1298px;
+    --container-9xl: 978px;
+    --container-280: 280px;
+    --container-10xl: 1104.21px;
+    --container-11xl: 439.38px;
+    --container-13xl: 423.57px;
+    --container-12xl: 210px;
+    --container-14xl: 1086.21px;
+    --container-15xl: 501px;
+    --container-16xl: 549px;
+    --container-17xl: 1082px;
+    --container-375: 375px;
+    --container-343: 343px;
+    --container-144: 144px;
+    --container-1078: 1078px;
+    --container-1000: 1000px;
+    --container-160: 160.58px;
+    
+    --color-bg-primary-gradient: #4d1b0f;
+    --color-bg-secondary-gradient: #131414;
+    --color-bg-primary-gradient2: #ef7d22;
+    --color-bg-secondary-gradient2: #e83a45;
+    --color-bg-primary-gradient3: #313030;
+    --color-bg-secondary-gradient3: #1B1A1A;
+    --color-bg-primary-gradient4: #AFAFAF;
+    --color-bg-secondary-gradient4: #474646;
+    --color-bg-primary-gradient5: #292828;
+    --color-bg-secondary-gradient5: #000000;
+
+    --font-gilroy: Gilroy, sans-serif;
+    --font-power_grotesk: PowerGrotesk, sans-serif;
+}
