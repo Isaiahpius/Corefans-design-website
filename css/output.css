@@ -161,6 +161,7 @@
     --spacing-144: 144px;
     --spacing-134: 134px;
     --spacing-906: 906px;
+    --spacing-1089: 1089px;
     --spacing-154: 154px;
     --spacing-233: 233px;
     --spacing-271: 271px;
@@ -379,21 +380,6 @@
   .relative {
     position: relative;
   }
-  .top-10 {
-    top: calc(var(--spacing) * 10);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
-  }
-  .top-32 {
-    top: calc(var(--spacing) * 32);
-  }
-  .top-48 {
-    top: calc(var(--spacing) * 48);
-  }
-  .left-32 {
-    left: calc(var(--spacing) * 32);
-  }
   .z-20 {
     z-index: 20;
   }
@@ -558,9 +544,6 @@
   }
   .h-\[163px\] {
     height: 163px;
-  }
-  .h-\[407px\] {
-    height: 407px;
   }
   .h-fit {
     height: fit-content;
@@ -1227,9 +1210,6 @@
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
-  .py-24 {
-    padding-block: calc(var(--spacing) * 24);
-  }
   .py-250 {
     padding-block: var(--spacing-250);
   }
@@ -1613,6 +1593,16 @@
       height: var(--spacing-682);
     }
   }
+  .sm\:h-1089 {
+    @media (width >= 40rem) {
+      height: var(--spacing-1089);
+    }
+  }
+  .sm\:h-\[1089px\] {
+    @media (width >= 40rem) {
+      height: 1089px;
+    }
+  }
   .sm\:h-fit {
     @media (width >= 40rem) {
       height: fit-content;
@@ -1930,11 +1920,6 @@
   .sm\:gap-y-10 {
     @media (width >= 40rem) {
       row-gap: calc(var(--spacing) * 10);
-    }
-  }
-  .sm\:gap-y-20 {
-    @media (width >= 40rem) {
-      row-gap: calc(var(--spacing) * 20);
     }
   }
   .sm\:rounded-4xl {

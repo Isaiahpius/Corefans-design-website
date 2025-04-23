@@ -42,12 +42,25 @@
                         <a href="">Get started</a>
                     </button>
                 </div>
-                <button class="inline-block sm:hidden">
+                <button id="hamburger" class="inline-block sm:hidden">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12H21M3 6H21M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>              
+                    </svg>
+                    
+                    <svg class="hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="white"/>
+                    </svg>
                 </button>
             </nav>
+            <div id="mobilenav" class="hidden max-w-343 w-full pt-4">
+                <ul class="font-gilroy font-semibold text-sm space-y-4 text-white">
+                  <li><a href="">For Artists</a></li>
+                  <li><a href="">For Fans</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Sign in</a></li>
+                  <li><a href="">Get started</a></li>
+                </ul>
+            </div>
         </header>
 
 
@@ -236,9 +249,9 @@
 
 
         <section class="max-w-343 sm:max-w-1078 w-full mx-auto ">
-            <div class="flex items-center my-10 sm:w-502 rounded-md mx-auto bg-brand-1350">
-                <button class="text-white w-256 font-gilroy font-semibold text-sm bg-brand-1350 py-2 px-8 rounded-r-md rounded-l-lg">Playlist</button>
-                <button class="text-brand-100 w-256 font-gilroy font-semibold text-sm bg-brand-1400 px-8 py-2 text-center rounded-l-lg rounded-r-lg">Bio</button>
+            <div id="Playlist" class="flex items-center my-10 sm:w-502 rounded-md mx-auto bg-brand-1350">
+                <button  class="text-white w-256 font-gilroy font-semibold text-sm bg-brand-1350 py-2 px-8 rounded-r-md rounded-l-lg">Playlist</button>
+                <button  class="text-brand-100 w-256 font-gilroy font-semibold text-sm bg-brand-1400 px-8 py-2 text-center rounded-l-lg rounded-r-lg">Bio</button>
             </div>
 
             <div class="max-w-343 sm:max-w-1078 w-full mx-auto border rounded-md border-brand-800">
@@ -302,7 +315,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="px-4 pb-4 sm:hidden flex items-center justify-between">
+                <div id="playlist" class="px-4 pb-4 sm:hidden flex items-center justify-between">
                     <div>
                         <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.64583 0.0712891C2.81317 0.0712891 2.97365 0.137763 3.09198 0.256086C3.2103 0.37441 3.27677 0.534892 3.27677 0.702227V5.34413L12.2451 0.166831C12.341 0.111463 12.4498 0.08231 12.5605 0.0823014C12.6713 0.0822928 12.78 0.111429 12.876 0.166782C12.9719 0.222135 13.0515 0.301755 13.1069 0.397643C13.1623 0.49353 13.1915 0.602307 13.1915 0.713043V12.0474C13.1916 12.1582 13.1626 12.2671 13.1072 12.3631C13.0519 12.4591 12.9723 12.5389 12.8763 12.5943C12.7804 12.6498 12.6716 12.679 12.5607 12.679C12.4499 12.6791 12.3411 12.6499 12.2451 12.5945L3.27677 7.41631V12.0591C3.27677 12.2264 3.2103 12.3869 3.09198 12.5052C2.97365 12.6236 2.81317 12.69 2.64583 12.69H1.20369C1.03636 12.69 0.875875 12.6236 0.757551 12.5052C0.639227 12.3869 0.572754 12.2264 0.572754 12.0591V0.702227C0.572754 0.534892 0.639227 0.37441 0.757551 0.256086C0.875875 0.137763 1.03636 0.0712891 1.20369 0.0712891H2.64583Z" fill="white" fill-opacity="0.3"/>
@@ -378,7 +391,7 @@
                 </div>
             </div>
             
-            <div class="hidden max-w-1078 w-full mx-auto border rounded-md border-brand-800 space-y-3 p-4">
+            <div id="bio" class="hidden max-w-1078 w-full mx-auto border rounded-md border-brand-800 space-y-3 p-4">
                 <h4 class="font-power_grotesk font-bold text-xl text-white">About</h4>
                 <p class="font-gilroy font-medium text-white leading-25">Mi tincidunt elit, id quisque ligula ac diam, amet. 
                     Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. 
@@ -707,5 +720,34 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        let hamburger = document.getElementById("hamburger")
+        let mobilenav = document.getElementById("mobilenav");
+      
+        hamburger.addEventListener("click", function() {
+          this.lastElementChild.classList.toggle('hidden');
+          this.firstElementChild.classList.toggle('hidden');
+          mobilenav.classList.toggle('hidden');
+        });
+      
+    </script>
+
+    <script>
+        let Playlist = document.getElementById('playlist')
+        let bio = document.getElementById('bio');
+
+        Playlist.addEventListener("click", function() {
+            this.lastElementChild.classList.toggle('hidden');
+            this.firstElementChild.classList.toggle('hidden');
+            bio.classList.toggle('hidden');
+
+            // bio.addEventListener("click", function() {
+            // this.lastElementChild.classList.toggle('hidden');
+            // this.firstElementChild.classList.toggle('hidden');
+            // Playlist.classList.toggle('hidden');
+            // });
+        });
+    </script>
 </body>
 </html>

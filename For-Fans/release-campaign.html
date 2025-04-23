@@ -42,12 +42,25 @@
                         <a href="">Get started</a>
                     </button>
                 </div>
-                <button class="inline-block sm:hidden">
+                <button id="hamburger" class="inline-block sm:hidden">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12H21M3 6H21M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>              
+                    </svg>
+                    
+                    <svg class="hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="white"/>
+                    </svg>
                 </button>
             </nav>
+            <div id="mobilenav" class="hidden max-w-343 w-full pt-4">
+                <ul class="font-gilroy font-semibold text-sm space-y-4 text-white">
+                  <li><a href="">For Artists</a></li>
+                  <li><a href="">For Fans</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Sign in</a></li>
+                  <li><a href="">Get started</a></li>
+                </ul>
+            </div>
         </header>
 
         <div class="block sm:hidden border-t border-brand-800 mb-7"></div>
@@ -632,5 +645,17 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        let hamburger = document.getElementById("hamburger")
+        let mobilenav = document.getElementById("mobilenav");
+      
+        hamburger.addEventListener("click", function() {
+          this.lastElementChild.classList.toggle('hidden');
+          this.firstElementChild.classList.toggle('hidden');
+          mobilenav.classList.toggle('hidden');
+        });
+      
+    </script>
 </body>
 </html>
